@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * main - print fizzbuzz
  * Return: Always 0
@@ -8,7 +9,7 @@ int main(void)
 {
 	int n;
 
-	printf("i");
+	printf("1");
 	for (n = 2; n <= 100; n++)
 	{
 		printf(" ");
