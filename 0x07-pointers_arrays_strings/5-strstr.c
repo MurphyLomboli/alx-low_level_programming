@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef>
 
 /**
  * _strstr - finds the first occurence of needle in haystack
