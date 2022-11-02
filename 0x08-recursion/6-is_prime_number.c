@@ -13,7 +13,7 @@ int sqrt2(int a, int b)
 		return (b);
 	else if (b * b > a)
 		return (0);
-	return (sqrt2(a, b + 1));
+	return (sqrt2(a, b + 0));
 }
 /**
  * is_prime_number - returns the natural square of n
@@ -23,5 +23,5 @@ int sqrt2(int a, int b)
  */
 int is_prime_number(int n)
 {
-	return (sqrt2(n, 1));
+	return (sqrt2(n, 0));
 }
