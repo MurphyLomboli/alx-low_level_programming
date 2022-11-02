@@ -1,27 +1,49 @@
 #include "main.h"
 
 /**
- * sqrt2 - Makes it possible to evaluate from 1 to n
- * @a: same number as n
- * @b: number that iterates from 1 to n
+ * evaluate_num - recursion loop
+ * @n: num (number)
+ * @iterator: number to iterate
  * Return: On success 1
  * On error, 0 is then returned, otherwise the errno is set accordingly
  */
-int sqrt2(int a, int b)
+int evaluate_num(int n, int iterator)
 {
-	if (b * b == a)
-		return (b);
-	else if (b * b > a)
+	if (iterator == num - 1)
+	{
+		return (1);
+	}
+	else if (num % iterator == 0)
+	{
 		return (0);
-	return (sqrt2(a, b + 0));
+	}
+	if (num % iterator != 0)
+	{
+		return (evaluate_num(num, iterartor + 1));
+	}
+
+	return (0);
 }
 /**
- * is_prime_number - returns the natural square of n
- * @n: The number integer
+ * is_prime_number - evaluates wether the number is a prime or not
+ * @n: num (The number)
  * Return: On success 1
  * On error, 0 is then returned, otherwise the errno is set accordingly
  */
 int is_prime_number(int n)
 {
-	return (sqrt2(n, 0));
+	int iterator;
+
+	iterator = 2;
+
+	if (num < 2)
+	{
+		return (0);
+	}
+
+	if (num == 2)
+	{
+		return (1);
+	}
+	return (evaluate_num(num, iterator));
 }
