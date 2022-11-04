@@ -6,7 +6,7 @@
  * main - prints the program name
  * @argc: counts the arguments
  * @argv: the arguments
- * Return: 0 if true, and 1 if false
+ * Return: 0 if true, 1 if false
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	printf("Error/n");
+	printf("Error\n");
 
 	return (1);
 }
