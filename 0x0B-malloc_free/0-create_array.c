@@ -3,13 +3,12 @@
 #include <stdlib.h>
 
 /**
- * Author - Murphy Lomboli
- * *create_array - creates an array for chars
+ * create_array - creates an array of chars
  * @size: the size of the array
  * @c: the char to be initiated with
  * Return: a pointer to the array, or NULL if it fails
  */
-char *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c)
 {
 	unsigned int position;
 	char *buffer;
