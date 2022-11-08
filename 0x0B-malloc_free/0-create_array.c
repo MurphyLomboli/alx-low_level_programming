@@ -4,28 +4,37 @@
 
 /**
  * Author - Murphy Lomboli
- * *create_array - creates the array of chars which are initialized with char
+ * *create_array - creates an array for chars
  * @size: the size of the array
  * @c: the char to be initiated with
  * Return: a pointer to the array, or NULL if it fails
  */
-char *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c)
 {
 	unsigned int position;
 	char *buffer;
 
 	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	buffer = (char *) malloc(size * sizeof(c));
+
+	if (buffer == 0)
+	{
+		return (NULL);
+	}
+
+	else
+	{
+		position = 0;
+		while (position < size)
 		{
-		return (NULL);
+			*(buffer + position) = c;
+			position++;
 		}
-	array = malloc(size * sizeof(char));
-	if (array == NULL)
-	{
-		return (NULL);
+
+		return (buffer);
 	}
-	for (i = 0; i < size; i++)
-	{
-		array[i] = c;
-	}
-	return (array);
 }
