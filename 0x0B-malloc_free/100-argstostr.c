@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 		a++;
 	}
 	count = count + ac + 1;
-	str = malloc(sizeof(char) = count);
+	str = malloc(sizeof(char) * count);
 
 	if (str == NULL)
 	{
@@ -34,12 +34,12 @@ char *argstostr(int ac, char **av)
 	}
 	for (a = 0; a < ac; a++)
 	{
-		for (a = 0; av[a][b] != '\0'; b++)
+		for (b = 0; av[a][b] != '\0'; b++)
 		{
 			str[c] = av[a][b];
 			c++;
 		}
-		str[c] = '\0';
+		str[c] = '\n';
 		c++;
 	}
 
